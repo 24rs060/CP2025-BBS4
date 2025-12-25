@@ -57,9 +57,9 @@ function updateCharacterCount(inputId, counterId, maxLength) {
 
     input.on('input', () => {
         const length = input.val().length;
-        const rTime = maxLength - length;
+        const rNumber = maxLength - length;
         //counter.text(`${length}/${maxLength}`);
-        counter.text("残り文字数は" + rTime);
+        counter.text("残り文字数は" + rNumber);
 
         if (length > maxLength) {
             counter.addClass('error');
@@ -554,7 +554,7 @@ window.addEventListener('unload', () => {
             <div class="form-group">
                 <label for="contentInput">投稿内容</label>
                 <textarea id="contentInput" class="form-control"
-                          placeholder="投稿内容を入力してください"></textarea>
+                          placeholder="今の調子はどう？"></textarea>
                 <small class="character-count" id="contentCount">残り文字数は1000</small>
             </div>
             <div class="button-group">
